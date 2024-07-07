@@ -1,0 +1,26 @@
+const uploadButton = document.getElementById("upload-button");
+const audioFileInput = document.getElementById("audio-file");
+const insightsText = document.getElementById("insights-text");
+
+uploadButton.addEventListener("click", function () {
+    // Get the uploaded audio file
+    const audioFile = audioFileInput.files[0];
+
+    // Send the audio file to your server for analysis
+    // Replace with your server-side API endpoint
+    fetch("/analyze-audio", {
+        method: "POST",
+        body: audioFile,
+        headers: {
+            "Content-Type": "audio/wav"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Display the insights
+        insightsText.textContent = data.insights;
+    })
+    .catch(error => {
+        console.error("Error analyzing audio:", error);
+    });
+});

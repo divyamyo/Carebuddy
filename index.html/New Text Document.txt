@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Insights</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Voice Insights</h1>
+    </header>
+    <main>
+        <section id="upload-audio">
+            <h2>Upload Audio File</h2>
+            <input type="file" id="audio-file" accept="audio/*">
+            <button id="upload-button">Upload</button>
+        </section>
+        <section id="audio-insights">
+            <h2>Audio Insights</h2>
+            <p id="insights-text">No insights available</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
